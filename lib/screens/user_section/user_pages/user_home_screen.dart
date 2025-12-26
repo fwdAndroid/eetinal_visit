@@ -1,3 +1,5 @@
+import 'package:eetinal_visit/screens/auth/login_screen.dart';
+import 'package:eetinal_visit/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class UserHomeScreen extends StatefulWidget {
@@ -10,6 +12,16 @@ class UserHomeScreen extends StatefulWidget {
 class _UserHomeScreenState extends State<UserHomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: colorWhite,
+       appBar: AppBar(
+        backgroundColor: colorWhite,
+        actions: [
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (builder) => LoginScreen()));
+          }, child: Text("Login",style: TextStyle(color: mainColor),))
+        ],
+        leading: Image.asset("assets/splash.png"),
+     ) );
   }
 }
