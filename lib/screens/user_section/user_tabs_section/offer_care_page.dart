@@ -1,3 +1,4 @@
+import 'package:eetinal_visit/screens/user_section/detail_screens_user_section/provider_detail_screen.dart';
 import 'package:eetinal_visit/widgets/care_provider_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,7 @@ class _OfferCarePageState extends State<OfferCarePage> {
               location: provider['location'],
               rating: provider['rating'],
               onTap: () {
-                print("Tapped ${provider['name']}");
+                Navigator.push(context, MaterialPageRoute(builder: (builder) => ProviderDetailScreen(provider: provider)));
               },
             );
           },
