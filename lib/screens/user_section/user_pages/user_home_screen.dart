@@ -70,7 +70,7 @@ class _UserHomeScreenState extends State<UserHomeScreen>   with SingleTickerProv
                 unselectedLabelColor: Colors.grey,
                 indicatorColor: mainColor,
                 tabs: const [
-                  Tab(text: "Care"),
+                  Tab(text: "I Need Care"),
                   Tab(text: "Offer Care"),
                 ],
               ),

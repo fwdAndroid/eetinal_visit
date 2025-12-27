@@ -36,7 +36,10 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: colorWhite,
+      appBar: AppBar(
+        backgroundColor: colorWhite,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -44,6 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Image.asset(
               "assets/splash.png",
+              height: 200,
               width: MediaQuery.of(context).size.width,
             ),
           
