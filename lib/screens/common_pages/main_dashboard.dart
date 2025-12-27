@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:eetinal_visit/screens/provider_section/provider_pages/provider_booking_screen.dart';
+import 'package:eetinal_visit/screens/user_section/user_pages/user_booking_screen.dart';
 import 'package:eetinal_visit/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -45,6 +47,7 @@ class _MainDashboardState extends State<MainDashboard> {
     _userScreens = const [
       UserHomeScreen(),
       UserSearchScreen(),
+      UserBookingScreen(),
       UserChatScreen(),
       UserFavouriteScreen(),
       UserAccountScreen(),
@@ -53,6 +56,7 @@ class _MainDashboardState extends State<MainDashboard> {
     _providerScreens = const [
       ProviderHomeScreen(),
       ProviderSearchScreen(),
+      ProviderBookingScreen(),
       ProviderChatScreen(),
       ProviderFavouriteScreen(),
       ProviderAccountScreen(),
@@ -91,6 +95,10 @@ class _MainDashboardState extends State<MainDashboard> {
             BottomNavigationBarItem(
               icon: Icon(Icons.search, size: 25),
               label: "Search",
+            ),
+             BottomNavigationBarItem(
+              icon: Icon(Icons.library_books, size: 25),
+              label: "Booking",
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.chat_bubble_outline, size: 25),
